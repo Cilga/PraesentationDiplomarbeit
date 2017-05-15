@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{subfig}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{capt-of}
 \title{Web-basierte Registrierkasse}
 \author{Lukas Gritsch Benjamin Cilga}
 
@@ -26,53 +28,130 @@
 \Large Funktionsweise
 \begin{figure}[h]
 	\centering
-	\subfloat[MVC-Pattern]{\includegraphics[scale=0.6]{Bilder/MVC.png}} \hfill
-	\subfloat[Modell]{\includegraphics[scale=0.5]{Bilder/Modell.png}}
+	\subfloat[MVC-Pattern]{\includegraphics[scale=0.55]{Bilder/MVC.png}} \hfill
+	\subfloat[Modell]{\includegraphics[scale=0.45]{Bilder/Modell.png}}
 	
 \end{figure}
 \end{frame}
 
 \subsection{Einarbeitungsphase}
 
+\subsubsection{Laravel}
+
 \begin{frame}
-\frametitle{Einarbeitungsphase}
+\frametitle{Laravel}
+
 \begin{Large}
-Einlesen in die Vorgängerarbeit\\ \vspace{0.2 cm}
-Laravel oder Servlets und JSP ? \vspace{1 cm}
-\end{Large}
+Grobe Fakten \vspace{0.2 cm}
+\end{Large} 
 
-\begin{tabular}{l|l}
-\textbf{Laravel:} & \textbf{Servlets und JSP}\\ \hline
-PHP Framework & Java und JSP Dateien\\
-Vereinfachter Syntax & Java und HTML Syntax\\
-Eigenes Datenbankdesign & Keine Designvorgabe
-\end{tabular}
-
+\begin{itemize}
+	\item[-] PHP Framework
+	\item[-] Arbeitet nach dem MVC Prinzip (Pattern)
+	\item[-] Übernimmt Datenbankverwaltung  
+	\item[-] Quellcode wird sehr stark vereinfacht
+\end{itemize}
+	
 \end{frame}
+
+
+\subsubsection{Servlets und JSP Dateien}
+
+\begin{frame}
+	\frametitle{Servlets und JSP Dateien}
+	
+	\begin{Large}
+		Grobe Fakten \vspace{0.2 cm}
+	\end{Large}		
+	\begin{itemize}
+		\item[-] Java und HTML code
+		\item[-] Folgt keinen speziefischen Prinzip (Pattern), es wird aber auch meist nach MVC gearbeitet
+		\item[-] Logik für die Datenbankverwaltung muss selbst erstellt werden
+		
+	\end{itemize}
+	
+\end{frame}
+
 
 \subsection{Umsetzungsphase}
 \begin{frame}
 \frametitle{Umsetzungsphase}
+
+\begin{Large}
+Herausforderung Rechnungserstellung \vspace{0.2 cm}
+\end{Large}
+
 \begin{itemize}
-	\item[-] Programmierung ---- Problem (Schwierigkeiten)
+	\item[-] Verwendung von \LaTeX \hspace{0.05 cm} zum erstellen der Rechnung
+	\item[-] Probleme mit dem kompilieren der Rechnung
+	\item[-] Daten wurden in falschem Verzeichnis gespeichert
 \end{itemize}
+
 \end{frame}
+
+
 
 
 \subsection{Testphase}
+
 \begin{frame}
 \frametitle{Testphase}
+
+\begin{Large}
+	Rasperry Pi als Testserver \vspace{0.2 cm}
+\end{Large}
 	\begin{itemize}
-		\item[-] Verwendung des Rasperry Pi --(Was ist ein Rassperry Pi -- Bilder --- verwendung als)
+		\item[-] Verwendung von raspbian-jessie (Debian Distribution)
+		\item[-] Installation von Tomcat 
+		\item[-] Übertragen der .war Datei in das Tomcat Verzeichnis 
 	\end{itemize}
 \end{frame}
+
+\subsubsection{Testdurchlauf}
+
+\begin{frame}
+	Finden des Rasperry Pi im Heimnetzwerk
+	\begin{figure}
+		\includegraphics[scale=0.46]{Bilder/gatewayInt.png}
+		\caption{Resparry Pi Informationen am Gateway}
+	\end{figure}		
+\end{frame}
+
+\begin{frame}
+	Aufrufen der Anwendung im Web-Browser
+	
+	\begin{figure}
+		\includegraphics[scale=0.7]{Bilder/url.png}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[scale=0.13]{Bilder/favouriten.png}
+		\caption{Erscheinung nach dem Login}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+Erstellen der Rechnung
+\begin{figure}
+	\includegraphics[scale=0.2]{Bilder/rechnungErstellen.png}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Wirtschaftliche Vorarbeit}
 \subsection{Marktforschung}
 \begin{frame}
 \frametitle{Fragebogen}
 \end{frame}
-
 \subsection{Umfragen}
 
 \begin{frame}
